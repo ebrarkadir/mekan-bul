@@ -2,10 +2,20 @@ import { NavLink } from "react-router-dom";
 import Rating from "./Rating";
 import FoodAndDrinkList from "./FoodAndDrinkList";
 import AdminButton from "./AdminButton";
-import {formatDistance} from "../services/Utils";
+import { formatDistance } from "../services/Utils";
+import { useNavigate } from "react-router-dom";
+
 const Venue = ({ venue, admin }) => {
-  const performClick= (evt) => {
+  const navigate = useNavigate(); // useNavigate hook'u burada kullanılır
+
+  const upClick = () => {
+    navigate("/admin/update");
   };
+
+  const performClick = () => {
+    // Silme işlemi gerçekleştirmek için gerekli fonksiyon
+  };
+
   return (
     <div className="list-group">
       <div className="col-xs-12 col-sm-12">
@@ -19,16 +29,16 @@ const Venue = ({ venue, admin }) => {
           <span className="span badge pull-right badge-default">
             {!admin ? formatDistance(venue.distance) : ""}
           </span>
-          {admin ? (<AdminButton type="primary" name="Sil" onClick={performClick}/>):""}
-          {admin ? (<AdminButton type="info" name="Güncelle" onClick={performClick}/>):""}
+          {admin ? <AdminButton type="primary" name="Sil" onClick={performClick} /> : ""}
+          {admin ? <AdminButton type="info" name="Güncelle" onClick={upClick} /> : ""}
           <p className="address"> {venue.address}</p>
           <p>
             <FoodAndDrinkList foodAndDrinkList={venue.foodanddrink} />
           </p>
-         
         </div>
       </div>
     </div>
   );
 };
+
 export default Venue;

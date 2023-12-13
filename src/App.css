@@ -1739,6 +1739,9 @@ fieldset {
   margin: 0;
   border: 0;
 }
+.checkbox{
+  
+}
 
 legend {
   display: block;
@@ -1753,9 +1756,11 @@ legend {
 }
 
 label {
-  display: block;
+  display:  flex;
   margin-bottom: 5px;
   font-weight: bold;;
+  padding-right: 2px;
+  
 }
 
 input {
@@ -1772,7 +1777,8 @@ input[type="search"] {
           box-sizing: border-box;
          
 }
-button{
+
+#button-add{
   background-color: rgba(227, 4, 14, 0.75)  ;
   border-radius: 5px;
   color: white;

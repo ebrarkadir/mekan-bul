@@ -15,13 +15,13 @@ const useCookies = (key, defaultValue) => {
 };
 
 const Home = () => {
-  const [searchVenue, setSearchVenue] = useCookies("searchVenue", "");
-  const [venues, dispatchVenues] = React.useReducer(VenueReducer, {
-    data: [],
-    isLoading: false,
-    isSuccess: false,
-    isError: false,
-  });
+    const [searchVenue, setSearchVenue] = useCookies("searchVenue", "");
+    const [venues, dispatchVenues] = React.useReducer(VenueReducer, {
+      data: [],
+      isLoading: false,
+      isSuccess: false,
+      isError: false,
+    });
   const search = (event) => {
     setSearchVenue(event.target.value);
   };

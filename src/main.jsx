@@ -10,6 +10,7 @@ import Admin from "./components/Admin";
 import AddUpdateVenue from "./components/AddUpdateVenue";
 import PageNotFound from "./components/PageNotFound";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import  UpdateVenue from "./components/UpdateVenue";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Route path="about" element={<About/>}/>
     <Route path="admin" element={<Admin/>}/>
     <Route path="admin/addupdate" element={<AddUpdateVenue/>}/>
+    <Route path="admin/update" element={<UpdateVenue/>}/>
     <Route path="*" element={<PageNotFound/>} />
     </Route>
     </Routes>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Header from "./Header";
+import VenueReducer from '../services/VenueReducer';
+
+const UpdateVenue = () => {
 
 
-const AddUpdateVenue = () => {
   const [mekanAdi, setMekanAdi] = useState('');
   const [mekanAdresi, setMekanAdresi] = useState('');
   const [imkanlar, setImkanlar] = useState('');
@@ -16,13 +18,14 @@ const AddUpdateVenue = () => {
   const [acilis2, setAcilis2] = useState('');
   const [kapanis2, setKapanis2] = useState('');
   const [kapali2, setKapali2] = useState(false);
+ 
 
   const handleAddUpdateVenue = () => {
   };
 
   return (
-    <>  
-      <Header headerText="Yeni Mekan Ekle"/>
+    <>
+      <Header headerText="Mekan güncelle"/>
       <form>
         
           <table>
@@ -81,11 +84,13 @@ const AddUpdateVenue = () => {
       </table>
 
         <button id='button-add' onClick={handleAddUpdateVenue}>
-          Mekanı Ekle
+          Mekanı güncelle
         </button>
       </form>
     </>
   );
 };
 
-export default AddUpdateVenue;
+export default UpdateVenue;
+
+

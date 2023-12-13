@@ -3,6 +3,8 @@ import Header from "./Header";
 import VenueDataService from "../services/VenueDataService";
 import VenueList from "./VenueList";
 
+
+
 function Admin() {
   const venueReducer = (state, action) => {
     switch (action.type) {
@@ -71,7 +73,9 @@ function Admin() {
         </div>
       )}
     </>
-  );
-}
 
-export default Admin;
+  );
+ 
+}
+ export default Admin;
+ 
