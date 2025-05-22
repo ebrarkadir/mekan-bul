@@ -1,6 +1,5 @@
 # Mekabul React Front-End
 
-Netlify linki: [https://mekanbul-frontend.netlify.app](https://mekanbul-frontend.netlify.app)
 
 ## Bileşenler
 1. **Navbar:** Navigasyon Çubuğu
